@@ -10,13 +10,13 @@
   <header class="header">
 
     <h1 class="header__logo logo"><a href="#" class="logo__link">Device</a></h1>
-    
+
     <div class="header__row">
 
       <form class="header__search-form" action="#" method="GET">
         <input class="header__search" type="search" placeholder="Поиск по сайту">
       </form>
-      
+
       <ul class="header__user-list user-list">
         <li class="user-list__item"><a href="#" class="user-list__link user-list__link--login">Войти</a></li>
         <li class="user-list__item"><a href="#" class="user-list__link user-list__link--compare">Сравнить</a></li>
@@ -39,7 +39,7 @@
 
     </div>
 
-    <!-- Выпадающий каталог товаров -->
+    <!-- ВЫПАДАЮЩИЙ КАТАЛОГ ТОВАРОВ -->
     <div class="header__catalog-menu">
 
       <nav class="header__catalog-navigation">
@@ -67,43 +67,126 @@
 
   <main class="main">
 
-    <!-- Здесь будет слайдер -->
+    <!-- СЛАЙДЕР -->
+    <div class="container">
+
+      <div class="slider">
+
+        <ul class="slider__toggles">
+          <li class="slider__toggle slider__toggle--active"></li>
+          <li class="slider__toggle"></li>
+          <li class="slider__toggle"></li>
+        </ul>
+
+        <div class="slide">
+          <div class="slide__image-wrapper">
+            <img src="#" class="slide__image" alt="Изображение товара">
+          </div>
+          <div class="slide__content">
+            <b class="slide__title">Делай селфи, как Бен Стиллер!</b>
+            <p class="paragraph">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a href="#" class="interactive-link">Подробнее</a>
+            <dl class="slide__description">
+              <dt class="slide__parameter">8,5 м</dt>
+              <dd class="slide__value">Длина палки</dd>
+              <dt class="slide__parameter">5 кг</dt>
+              <dd class="slide__value">Вес палки</dd>
+              <dt class="slide__parameter">Карбон</dt>
+              <dd class="slide__value">Материал</dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide__image-wrapper">
+            <img src="#" class="slide__image" alt="Изображение товара">
+          </div>
+          <div class="slide__content">
+            <b class="slide__title">Худеем правильно!</b>
+            <p class="paragraph">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a href="#" class="interactive-link">Подробнее</a>
+            <dl class="slide__description">
+              <dt class="slide__parameter">48 часов</dt>
+              <dd class="slide__value">Без подзарядки</dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide__image-wrapper">
+            <img src="#" class="slide__image" alt="Изображение товара">
+          </div>
+          <div class="slide__content">
+            <b class="slide__title">Порхает как бабочка, жалит как пчела!</b>
+            <p class="paragraph">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <a href="#" class="interactive-link">Подробнее</a>
+            <dl class="slide__description">
+              <dt class="slide__parameter">800 м</dt>
+              <dd class="slide__value">Дальность полета</dd>
+              <dt class="slide__parameter">50 м</dt>
+              <dd class="slide__value">Радиус поражения</dd>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
 
     <div class="container">
 
+      <!-- Карточки разделов товаров -->
+
       <section class="products">
 
+        <h2 class="visually-hidden">Группы товаров по категориям</h2>
+
         <ul class="products__list">
+
           <li class="products__item">
             <a href="#" class="products__link">
-              <img src="#" alt="Изображение товара" class="products__image"><h3 class="products__title">Виртуальная реальность</h3>
+              <p class="products__wrapper">
+                <img src="#" alt="Изображение товара" class="products__image">
+              </p>
+              <h3 class="products__title">Виртуальная реальность</h3>
             </a>
           </li>
+
           <li class="products__item">
             <a href="#" class="products__link">
-              <img src="#" alt="Изображение товара" class="products__image"><h3 class="products__title">Моноподы для селфи</h3>
+              <p class="products__wrapper"><img src="#" alt="Изображение товара" class="products__image"></p>
+              <h3 class="products__title">Моноподы для селфи</h3>
             </a>
           </li>
+
           <li class="products__item">
             <a href="#" class="products__link">
-              <img src="#" alt="Изображение товара" class="products__image"><h3 class="products__title">Экшн-камеры</h3>
+              <p class="products__wrapper"><img src="#" alt="Изображение товара" class="products__image"></p>
+              <h3 class="products__title">Экшн-камеры</h3>
             </a>
           </li>
+
           <li class="products__item">
             <a href="#" class="products__link">
-              <img src="#" alt="Изображение товара" class="products__image"><h3 class="products__title">Фитнес-браслеты</h3>
+              <p class="products__wrapper"><img src="#" alt="Изображение товара" class="products__image"></p>
+              <h3 class="products__title">Фитнес-браслеты</h3>
             </a>
           </li>
+
           <li class="products__item">
             <a href="#" class="products__link">
-              <img src="#" alt="Изображение товара" class="products__image"><h3 class="products__title">Умные часы</h3>
+              <p class="products__wrapper"><img src="#" alt="Изображение товара" class="products__image"></p>
+              <h3 class="products__title">Умные часы</h3>
             </a>
           </li>
+
           <li class="products__item">
             <a href="#" class="products__link">
-              <img src="#" alt="Изображение товара" class="products__image"><h3 class="products__title">Квадрокоптеры</h3>
+              <p class="products__wrapper"><img src="#" alt="Изображение товара" class="products__image"></p>
+              <h3 class="products__title">Квадрокоптеры</h3>
             </a>
           </li>
+
         </ul>
 
       </section>
@@ -118,7 +201,8 @@
 
         <p class="paragraph">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 
-        <p class="paragraph">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <p class="paragraph">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими
+          транспортными компаниями:</p>
 
         <ul class="about-us__list">
           <li class="about-us__item"><a href="#" class="about-us__link">Деловые Линии</a></li>
@@ -134,7 +218,8 @@
 
         <h2 class="section-title">Контакты</h2>
 
-        <p class="paragraph">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <p class="paragraph">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
+          работоспособность покупки. Всякое бывает.</p>
 
         <img class="contacts__map" src="#" alt="Карта нахождения нашего офиса" width="560" height="222">
 
@@ -151,9 +236,12 @@
       <h1 class="footer__logo logo"><a href="#" class="logo__link">Device</a></h1>
 
       <ul class="footer__user-list user-list">
-        <li class="user-list__item"><a href="#" class="footer__link user-list__link user-list__link--login">Войти</a></li>
-        <li class="user-list__item"><a href="#" class="footer__link user-list__link user-list__link--compare">Сравнить</a></li>
-        <li class="user-list__item"><a href="#" class="footer__link user-list__link user-list__link--cart">Корзина</a></li>
+        <li class="user-list__item"><a href="#" class="footer__link user-list__link user-list__link--login">Войти</a>
+        </li>
+        <li class="user-list__item"><a href="#"
+            class="footer__link user-list__link user-list__link--compare">Сравнить</a></li>
+        <li class="user-list__item"><a href="#" class="footer__link user-list__link user-list__link--cart">Корзина</a>
+        </li>
       </ul>
 
     </div>
@@ -186,7 +274,7 @@
 
     </div>
 
-</footer>
+  </footer>
 
 </body>
 
