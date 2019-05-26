@@ -10,83 +10,106 @@
 </head>
 
 <body>
+
   <header class="header">
+  
+    <div class="container">
+  
+      <div class="header__inner">
+  
+        <h1 class="header__logo logo">
+          <a href="#" class="logo__link">Device</a>
+        </h1>
+  
+        <div class="header__row">
+  
+          <form class="header__search-form" action="#" method="GET">
+            <input class="header__search" type="search" placeholder="Поиск по сайту">
+            <button type="submit" class="header__search-button">Найти</button>
+          </form>
+  
+          <ul class="header__user-list user-list list">
 
-    <h1 class="header__logo logo"><a href="#" class="logo__link">Device</a></h1>
+            <li class="user-list__item user-list__item--login">
+              <a href="#" class="user-list__link">
+                <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+                Войти
+              </a>
+            </li>
+            <li class="user-list__item user-list__item--compare">
+              <a href="#" class="user-list__link">
+                <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+                Сравнить
+              </a>
+            </li>
+            <li class="user-list__item user-list__item--cart">
+              <a href="#" class="user-list__link">
+                <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
+                Корзина
+              </a>
+            </li>
+            
+          </ul>
+  
+        </div>
+  
+        <div class="header__row header__row--bottom">
+  
+          <button class="header__catalog-button" type="button">Каталог товаров</button>
+  
+          <nav class="header__navigation navigation">
+            <ul class="navigation__list list">
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Доставка</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Гaрантия</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+  
+        </div>
 
-    <div class="header__row">
+      <!-- ВЫПАДАЮЩИЙ КАТАЛОГ ТОВАРОВ -->
+      <div class="header__catalog-menu">
 
-      <form class="header__search-form" action="#" method="GET">
-        <input class="header__search" type="search" placeholder="Поиск по сайту">
-      </form>
+        <nav class="header__catalog-navigation">
 
-      <ul class="header__user-list user-list list">
-        <li class="user-list__item">
-          <a href="#" class="user-list__link user-list__link--login">Войти</a>
-        </li>
-        <li class="user-list__item">
-          <a href="#" class="user-list__link user-list__link--compare">Сравнить</a>
-        </li>
-        <li class="user-list__item">
-          <a href="#" class="user-list__link user-list__link--cart">Корзина</a>
-        </li>
-      </ul>
+          <ul class="header__catalog-list list">
+            <li class="header__catalog-item">
+              <a href="#" class="header__catalog-link">Виртуальная реальность</a>
+            </li>
+            <li class="header__catalog-item">
+              <a href="#" class="header__catalog-link">Моноподы для селфи</a>
+            </li>
+            <li class="header__catalog-item">
+              <a href="#" class="header__catalog-link">Экшн-камеры</a>
+            </li>
+          </ul>
+
+          <ul class="header__catalog-list list">
+            <li class="header__catalog-item">
+              <a href="#" class="header__catalog-link">Фитнес-браслеты</a>
+            </li>
+            <li class="header__catalog-item">
+              <a href="#" class="header__catalog-link">Умные часы</a>
+            </li>
+          </ul>
+
+          <ul class="header__catalog-list list">
+            <li class="header__catalog-item">
+              <a href="#" class="header__catalog-link">Квадрокоптеры</a>
+            </li>
+          </ul>
+
+        </nav>
+
+      </div>
 
     </div>
-
-    <div class="header__row">
-
-      <button class="header__catalog-button" type="button">Каталог товаров</button>
-
-      <nav class="header__navigation navigation">
-        <ul class="navigation__list list">
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">Доставка</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">Горантия</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-
-    </div>
-
-    <!-- ВЫПАДАЮЩИЙ КАТАЛОГ ТОВАРОВ -->
-    <div class="header__catalog-menu">
-
-      <nav class="header__catalog-navigation">
-
-        <ul class="header__catalog-list list">
-          <li class="header__catalog-item">
-            <a href="#" class="header__catalog-link">Виртуальная реальность</a>
-          </li>
-          <li class="header__catalog-item">
-            <a href="#" class="header__catalog-link">Моноподы для селфи</a>
-          </li>
-          <li class="header__catalog-item">
-            <a href="#" class="header__catalog-link">Экшн-камеры</a>
-          </li>
-        </ul>
-
-        <ul class="header__catalog-list list">
-          <li class="header__catalog-item">
-            <a href="#" class="header__catalog-link">Фитнес-браслеты</a>
-          </li>
-          <li class="header__catalog-item">
-            <a href="#" class="header__catalog-link">Умные часы</a>
-          </li>
-        </ul>
-
-        <ul class="header__catalog-list list">
-          <li class="header__catalog-item">
-            <a href="#" class="header__catalog-link">Квадрокоптеры</a>
-          </li>
-        </ul>
-
-      </nav>
 
     </div>
 
@@ -95,72 +118,109 @@
   <main class="main">
 
     <!-- СЛАЙДЕР -->
-    <section class="slider">
+    <section class="main-section-slider">
 
       <div class="container">
 
-        <ul class="slider__toggles">
-          <li class="slider__toggle slider__toggle--active"></li>
-          <li class="slider__toggle"></li>
-          <li class="slider__toggle"></li>
-        </ul>
+        <div class="slider">
 
-        <div class="slide">
-          <div class="slide__image-wrapper">
-            <img src="img/big-slider-1.png" class="slide__image" width="384" height="486" alt="Изображение товара">
+          <ul class="slider__toggles list">
+            <li class="slider__toggle slider__toggle--active"></li>
+            <li class="slider__toggle"></li>
+            <li class="slider__toggle"></li>
+          </ul>
+
+          <div class="slide">
+
+            <div class="slide__image-wrapper">
+              <img src="img/big-slider-1.png" class="slide__image" width="384" height="486" alt="Изображение товара">
+            </div>
+
+            <div class="slide__content">
+              <b class="slide__title">Делай селфи,<br> как Бен Стиллер!</b>
+              <p class="paragraph slide__paragraph">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров
+                длиной и весом всего 5 килограмм.</p>
+              <a href="#" class="interactive-link slide__interactive-link">Подробнее</a>
+
+              <table class="slide__description">
+                <tbody>
+                  <tr">
+                    <td class="slide__parameter">8,5 м</td>
+                    <td class="slide__parameter">5 кг</td>
+                    <td class="slide__parameter">Карбон</td>
+                  </tr>
+
+                  <tr>
+                    <td class="slide__value">Длина палки</td>
+                    <td class="slide__value">Вес палки</td>
+                    <td class="slide__value">Материал</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- <dl class="slide__description">
+
+                
+                  <dt class="slide__parameter">8,5 м</dt>
+                  <dd class="slide__value">Длина палки</dd>
+                
+
+                
+                  <dt class="slide__parameter">5 кг</dt>
+                  <dd class="slide__value">Вес палки</dd>
+                
+
+                
+                  <dt class="slide__parameter">Карбон</dt>
+                  <dd class="slide__value">Материал</dd>
+                
+
+              </dl> -->
+
+            </div>
+
           </div>
-          <div class="slide__content">
-            <b class="slide__title">Делай селфи, как Бен Стиллер!</b>
-            <p class="paragraph">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a href="#" class="interactive-link">Подробнее</a>
-            <dl class="slide__description">
-              <dt class="slide__parameter">8,5 м</dt>
-              <dd class="slide__value">Длина палки</dd>
-              <dt class="slide__parameter">5 кг</dt>
-              <dd class="slide__value">Вес палки</dd>
-              <dt class="slide__parameter">Карбон</dt>
-              <dd class="slide__value">Материал</dd>
-            </dl>
+
+          <div class="slide">
+            <div class="slide__image-wrapper">
+              <img src="img/big-slider-2.png" class="slide__image" width="345" height="485" alt="Изображение товара">
+            </div>
+            <div class="slide__content">
+              <b class="slide__title">Худеем правильно!</b>
+              <p class="paragraph">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+                соблюдать диету.</p>
+              <a href="#" class="interactive-link">Подробнее</a>
+              <dl class="slide__description">
+                <dt class="slide__parameter">48 часов</dt>
+                <dd class="slide__value">Без подзарядки</dd>
+              </dl>
+            </div>
           </div>
+
+          <div class="slide">
+            <div class="slide__image-wrapper">
+              <img src="img/big-slider-3.png" class="slide__image" width="526" height="334" alt="Изображение товара">
+            </div>
+            <div class="slide__content">
+              <b class="slide__title">Порхает как бабочка, жалит как пчела!</b>
+              <p class="paragraph">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
+                под стандартную камеру.</p>
+              <a href="#" class="interactive-link">Подробнее</a>
+              <dl class="slide__description">
+                <dt class="slide__parameter">800 м</dt>
+                <dd class="slide__value">Дальность полета</dd>
+                <dt class="slide__parameter">50 м</dt>
+                <dd class="slide__value">Радиус поражения</dd>
+              </dl>
+            </div>
+          </div>
+
         </div>
-
-        <div class="slide">
-          <div class="slide__image-wrapper">
-            <img src="img/big-slider-2.png" class="slide__image" width="345" height="485" alt="Изображение товара">
-          </div>
-          <div class="slide__content">
-            <b class="slide__title">Худеем правильно!</b>
-            <p class="paragraph">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            <a href="#" class="interactive-link">Подробнее</a>
-            <dl class="slide__description">
-              <dt class="slide__parameter">48 часов</dt>
-              <dd class="slide__value">Без подзарядки</dd>
-            </dl>
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="slide__image-wrapper">
-            <img src="img/big-slider-3.png" class="slide__image" width="526" height="334" alt="Изображение товара">
-          </div>
-          <div class="slide__content">
-            <b class="slide__title">Порхает как бабочка, жалит как пчела!</b>
-            <p class="paragraph">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a href="#" class="interactive-link">Подробнее</a>
-            <dl class="slide__description">
-              <dt class="slide__parameter">800 м</dt>
-              <dd class="slide__value">Дальность полета</dd>
-              <dt class="slide__parameter">50 м</dt>
-              <dd class="slide__value">Радиус поражения</dd>
-            </dl>
-          </div>
-        </div>
-
       </div>
 
     </section>
 
-      <!-- Карточки разделов товаров. Добавить svg похже-->
+    <!-- Карточки разделов товаров. Добавить svg похже-->
 
     <section class="products">
 
@@ -234,22 +294,25 @@
 
         <div class="slider-services__slide">
           <h2 class="section-title">Доставка</h2>
-          <p class="paragraph">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <p class="paragraph">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь
+            мы неплохо заработаем, поднимая его на ваш этаж.</p>
         </div>
 
         <div class="slider-services__slide">
           <h2 class="section-title">Гарантия</h2>
-          <p class="paragraph">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+          <p class="paragraph">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы
+            выдадим вам новый. Товар, не дом, конечно же.</p>
         </div>
 
         <div class="slider-services__slide">
           <h2 class="section-title">Кредит</h2>
-          <p class="paragraph">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+          <p class="paragraph">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
+            выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         </div>
 
       </div>
 
-    </section>  
+    </section>
 
     <!-- БРЕНДЫ ПРОИЗВОДИТЕЛИ -->
 
@@ -269,18 +332,18 @@
           <li class="brands__item">
             <img src="img/logo-3.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
           </li>
-          <li class="brands__item"> 
+          <li class="brands__item">
             <img src="img/logo-4.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
           </li>
         </ul>
-      
+
       </div>
 
     </section>
 
     <!-- О НАС -->
     <div class="container">
-  
+
       <section class="about-us">
 
         <h2 class="section-title">О нас</h2>
@@ -320,7 +383,7 @@
       </section>
 
     </div>
-    
+
   </main>
 
   <footer class="footer">
