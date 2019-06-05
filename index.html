@@ -336,32 +336,48 @@
 
     <!-- СЛАЙДЕР СЕРВИСОВ -->
 
-    <section class="slider-services">
+    <section class="main__slider-section main__slider-section--services">
 
       <div class="container">
 
-        <ul class="slider-services__toggles list">
-          <li class="slider-services__toggle slider-services__toggle--active">Доставка</li>
-          <li class="slider-services__toggle">Гарантия</li>
-          <li class="slider-services__toggle">Кредит</li>
-        </ul>
+        <div class="slider-services">
 
-        <div class="slider-services__slide">
-          <h2 class="section-title">Доставка</h2>
-          <p class="paragraph">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь
-            мы неплохо заработаем, поднимая его на ваш этаж.</p>
-        </div>
+          <ul class="slider-services__toggles list">
+            <li class="slider-services__toggle slider-services__toggle--active">Доставка</li>
+            <li class="slider-services__toggle">Гарантия</li>
+            <li class="slider-services__toggle">Кредит</li>
+          </ul>
 
-        <div class="slider-services__slide">
-          <h2 class="section-title">Гарантия</h2>
-          <p class="paragraph">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы
-            выдадим вам новый. Товар, не дом, конечно же.</p>
-        </div>
+          <div class="slider-services__slide slider-services__slide--delivery">
 
-        <div class="slider-services__slide">
-          <h2 class="section-title">Кредит</h2>
-          <p class="paragraph">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
-            выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+            <h2 class="section-title">Доставка</h2>
+
+            <p class="paragraph slider-services__paragraph">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь
+              мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+
+          </div>
+
+          <div class="slider-services__slide slider-services__slide--warranty">
+
+            <h2 class="section-title">Гарантия</h2>
+ 
+            <p class="paragraph slider-services__paragraph">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы
+              выдадим вам новый.<br> Товар, не дом, конечно же.
+            </p>
+
+          </div>
+
+          <div class="slider-services__slide slider-services__slide--credit">
+
+            <h2 class="section-title">Кредит</h2>
+
+            <p class="paragraph slider-services__paragraph">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
+              выгодные условия кредита. Выгодные для нашего банка, разумеется.
+            </p>
+
+          </div>
+        
         </div>
 
       </div>
@@ -377,17 +393,17 @@
         <h2 class="visually-hidden">Брнеды производители товаров</h2>
 
         <ul class="brands__list list">
-          <li class="brands__item">
-            <img src="img/logo-1.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
+          <li class="brands__item brands__item--dji">
+            <img src="img/logo-1-color.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
           </li>
-          <li class="brands__item">
-            <img src="img/logo-2.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
+          <li class="brands__item brands__item--adgets">
+            <img src="img/logo-2-color.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
           </li>
-          <li class="brands__item">
-            <img src="img/logo-3.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
+          <li class="brands__item brands__item--gopro">
+            <img src="img/logo-3-color.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
           </li>
-          <li class="brands__item">
-            <img src="img/logo-4.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
+          <li class="brands__item brands__item--vive">
+            <img src="img/logo-4-color.jpg" class="brands__logo" width="260" height="100" alt="Логотип бренда">
           </li>
         </ul>
 
@@ -396,15 +412,15 @@
     </section>
 
     <!-- О НАС -->
-    <div class="container">
+    <div class="container container--flex">
 
       <section class="about-us">
 
-        <h2 class="section-title">О нас</h2>
+        <h2 class="section-title section-title--decoration">О нас</h2>
 
-        <p class="paragraph">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p class="paragraph about-us__paragraph">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 
-        <p class="paragraph">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими
+        <p class="paragraph about-us__paragraph about-us__paragraph--bottom">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими
           транспортными компаниями:</p>
 
         <ul class="about-us__list list">
@@ -419,20 +435,22 @@
           </li>
         </ul>
 
-        <a href="#" class="interactive-link">Подробнее о нас</a>
+        <a href="#" class="interactive-link about-us__interactive-link">Подробнее о нас</a>
 
       </section>
 
+      <!-- КОНТАКТЫ -->
+
       <section class="contacts">
 
-        <h2 class="section-title">Контакты</h2>
+        <h2 class="section-title section-title--decoration">Контакты</h2>
 
-        <p class="paragraph">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
+        <p class="paragraph contacts__paragraph">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
           работоспособность покупки. Всякое бывает.</p>
 
         <img class="contacts__map" src="img/map.jpg" alt="Карта нахождения нашего офиса" width="560" height="222">
 
-        <a href="#" class="interactive-link">Напишите нам</a>
+        <a href="#" class="interactive-link contacts__interactive-link">Напишите нам</a>
 
       </section>
 

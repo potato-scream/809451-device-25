@@ -68,6 +68,11 @@ body {
     padding-right: 20px;
 }
 
+.container--flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .logo {
     margin: 0;
     font-family: "Gilroy", "Arial", sans-serif;
@@ -130,7 +135,7 @@ body {
     display: block;
     position: absolute;
     content: "";
-    width: 220px;
+    width: 100%;
     height: 8px;
     background-color: #f0c52e;
     z-index: -1;
@@ -196,6 +201,10 @@ body {
 .header__search:focus {
     border-bottom: 2px solid #000000;
 }
+/* 
+.header__search-form:focus-within .header__search { 
+    border-bottom: 2px solid #000000; 
+} */
 
 .header__search::placeholder {
     color: #ac9e69;
@@ -485,6 +494,7 @@ body {
     font-size: 47px;
     line-height: 56px;
     position: relative;
+    letter-spacing: 1px;
 }
 
 .slide__paragraph  {
@@ -611,12 +621,120 @@ body {
     color: #000000;
 }
 
+.main__slider-section--services {
+    min-height: 388px;
+    background: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px, #e5e5e5 288px);
+}
+
+.slider-services {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.slider-services__toggles { 
+    width: 284px;
+    padding-top: 68px;
+    padding-bottom: 60px;
+    border-right: 7px solid #000000;
+}
+
 .slider-services__toggle {
+    width: 160px;
+    text-align: center;
     font-size: 18px;
     line-height: 24px;
+    letter-spacing: 3.7px;
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: bold;
-    text-transform: uppercase; 
+    text-transform: uppercase;
+    padding: 20px; 
+    position: relative;
+    z-index: 1;
+}
+
+.slider-services__toggle--active {
+    color: #f7e184;
+}
+
+.slider-services__toggle.slider-services__toggle--active::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 40px;
+    background-color: #000000;
+    z-index: -1;
+    top: 50%;
+    margin-top: -20px;
+    left: 0px; 
+}
+
+.slider-services__toggle::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 160px;
+    height: 8px;
+    background-color: #f0c52e;
+    z-index: -1;
+    top: 50%;
+    margin-top: -3px;
+    left: 0px;
+}
+
+.slider-services__toggle:hover::before {
+    height: 40px;
+    margin-top: -20px;
+}
+
+.slider-services__toggle:active::before {
+    width: 278px;
+    height: 40px;
+    margin-top: -20px;
+    background-color: #000000;
+}
+
+.slider-services__toggle:active {
+    color: #f7e184;
+}
+
+.slider-services__slide {
+    width: 876px;
+    width: 876px;
+    padding-top: 73px;
+    padding-left: 117px;
+}
+
+.slider-services__slide--delivery {
+    display: block;
+    background-image: url("../img/delivery-slider.png");
+    background-repeat: no-repeat;
+    background-position: 673px 85px;
+}
+
+.slider-services__paragraph {
+    margin-top: 32px;
+    padding-right: 310px;
+    letter-spacing: 0.2px;
+}
+
+.slider-services__slide--warranty {
+    display: none;
+    background-image: url("../img/warranty-slider.png");
+    background-repeat: no-repeat;
+    background-position: 659px 61px;
+}
+
+.slider-services__slide--credit {
+    display: none;
+    background-image: url("../img/credit-slider.png");
+    background-repeat: no-repeat;
+    background-position: 650px 61px;
+}
+
+.slider-services__slide--credit .slider-services__paragraph {
+    padding-right: 325px;
 }
 
 .section-title {
@@ -625,6 +743,107 @@ body {
     line-height: 48px;
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.section-title--decoration {
+    position: relative;
+}
+
+.section-title--decoration::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 7px;
+    background-color: #000000;
+    bottom: 93px;
+    left: 0;
+}
+
+/* БРЕНДЫ ПРОИЗВОДИТЕЛИ */
+
+.brands {
+    min-height: 288px;
+    padding-top: 94px;
+}
+
+.brands__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;  
+}
+
+.brands__item {
+    width: 260px;
+    position: relative;
+}
+
+.brands__item::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 260px;
+    height: 100px;
+}
+
+.brands__item--dji::before {
+    background-image: url("../img/logo-1.jpg");
+}
+
+.brands__item--adgets::before {
+    background-image: url("../img/logo-2.jpg");
+}
+
+.brands__item--gopro::before {
+    background-image: url("../img/logo-3.jpg");
+}
+
+.brands__item--vive::before {
+    background-image: url("../img/logo-4.jpg");
+}
+
+.brands__item:hover::before {
+    display: none;
+}
+
+ /* О НАС */
+
+.about-us {
+    width: 580px;
+    min-height: 655px;
+    padding-right: 20px;
+    padding-top: 51px;
+}
+
+.about-us__paragraph {
+   margin-top: 44px;
+   padding-right: 85px; 
+}
+
+.about-us__paragraph--bottom {
+    margin-top: 29px;
+}
+
+.about-us__list {
+    margin-top: 66px;
+    padding-left: 35px;
+    letter-spacing: 1px;
+}
+
+.about-us__item {
+    position: relative;
+}
+
+.about-us__item::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    top: 17px;
+    left: -34px;   
 }
 
 .about-us__link {
@@ -635,6 +854,34 @@ body {
     color: #000000;
     text-decoration: none;
 }
+
+.about-us__interactive-link {
+    margin-top: 62px;
+    width: 260px;
+}
+
+/* КОНТАКТЫ  */
+
+.contacts {
+    width: 580px;
+    padding-left: 20px;
+    padding-top: 51px;
+}
+
+.contacts__paragraph {
+    margin-top: 43px;
+}
+
+.contacts__map {
+    margin-top: 39px;
+}
+
+.contacts__interactive-link {
+    width: 260px;
+    margin-top: 68px;
+}
+
+/* ПОДВАЛ  */
 
 .footer {
     background-color: #464646;
@@ -656,7 +903,7 @@ body {
 }
 
 
-/* Модальные окна  */
+/* МОДАЛЬНЫЕ ОКНА  */
 
 .contact-form__item {
     margin: 0;
@@ -669,14 +916,20 @@ body {
     font-weight: bold;
     color: #000000; 
 }
-/* 
-::placeholder {
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;
-    color: #464646;
-} */
 
+.contact-form__input {
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.contact-form__input:hover {
+    background-color: #eaeaea;
+}
+
+.contact-form__input:focus {
+    border: 3px solid #f7e296;
+    background-color: transparent;
+}
 
 /* СТРАНИЦА КАТАЛОГА  */
 
