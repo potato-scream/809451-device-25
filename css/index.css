@@ -83,6 +83,8 @@ body {
 .logo__link {
     text-decoration: none;
     color: #000000;
+    font-size: 48px;
+    line-height: 1;
 }
 
 .logo__link:hover {
@@ -94,11 +96,19 @@ body {
  }
 
 .header__logo {
-    margin-bottom: 13px;
+    margin-bottom: 9px;
 }
 
 .footer__logo .logo__link {
     color: #ffc600;
+}
+
+.footer__logo:hover .logo__link {
+    color: #b5931c;
+}
+
+.footer__logo:active .logo__link {
+    color: #7e6d31;
 }
 
 .list {
@@ -157,12 +167,8 @@ body {
     width: 1160px;
     padding-left: 60px;
     padding-right: 60px;
-    padding-top: 24px;
+    padding-top: 16px;
     min-height: 228px;
-}
-
-.logo__link {
-    font-size: 48px;
 }
 
 .header__row {
@@ -254,7 +260,7 @@ body {
 }
 
 .user-list__item {
-    margin-right: 42px;
+    margin-right: 41px;
 }
 
 .user-list__item--login {
@@ -288,7 +294,7 @@ body {
 }
 
 .user-list__icon {
-    margin-right: 7px;
+    margin-right: 8px;
 }
 
 .user-list__item--login .user-list__icon {
@@ -362,10 +368,20 @@ body {
     color: #ffffff;
 }
 
+.footer__navigation .navigation__link:hover {
+    color: #b5b5b5;
+}
+
+.footer__navigation .navigation__link:active {
+    color: #7e7e7e;
+}
+
 .header__catalog-menu {
     position: absolute;
+    z-index: 1;
     background-color: #f7e296;
     width: 1160px;
+    min-height: 160px;
     top: 179px;
     left: 133px;
     padding-left: 60px;
@@ -376,13 +392,31 @@ body {
 .header__catalog-navigation {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.header__catalog-list {
+    width: 200px;
+}
+
+.header__catalog-list--first {
+    margin-right: 40px;
 }
 
 .header__catalog-link {
     font-size: 15px;
     line-height: 36px;
+    letter-spacing: 0.1px;
     color: #000000;
     text-decoration: none;
+}
+
+.header__catalog-link:hover {
+    color: #766c3f;
+}
+
+.header__catalog-link:active {
+    color: #b6a661;
 }
 
 .main__slider-section {
@@ -811,7 +845,7 @@ body {
 
 .about-us {
     width: 580px;
-    min-height: 655px;
+    min-height: 654px;
     padding-right: 20px;
     padding-top: 51px;
 }
@@ -885,11 +919,101 @@ body {
 
 .footer {
     background-color: #464646;
+    padding-top: 60px;
+    min-height: 323px;
+    position: relative;
+}
+
+.footer::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600;
+    bottom: 79px;
+    left: 132px;
+}
+
+.footer__row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__row--middle {
+    margin-top: 22px;
+}
+
+.footer__row--bottom {
+    margin-top: 61px;
+    justify-content: flex-end;
+}
+
+.footer__logo {
+    width: 200px;
+}
+
+.footer__navigation .navigation__list {
+    justify-content: flex-start;
+    padding-top: 3px;
+}
+
+.footer__navigation .navigation__item {
+    margin: 0;
+    padding-right: 17px;
+    padding-left: 17px;
+}
+
+.footer__user-list {
+    width: 580px;
+    padding-left: 20px;
+    margin-left: auto;   
+}
+
+.footer__user-list .user-list__item {
+    margin: 0;
+}
+
+.footer__user-list .user-list__item:last-child {
+    margin-left: 41px;
+}
+
+.footer__user-list .user-list__item:nth-child(2) {
+    margin-left: 46px;
 }
 
 .footer__link {
     line-height: 36px;
+    color: #c8c8c8;
+}
+
+.footer__link .user-list__icon {
+    margin-right: 7px;
+}
+
+.footer__link:hover {
     color: #ffffff;
+}
+
+.footer__link:active {
+    color: #7e7e7e;
+}
+
+.footer__link .user-list__icon {
+    fill: #ffc600;
+}
+
+.footer__link .user-list__icon {
+    fill: #ffc600;
+}
+
+.footer__link:hover .user-list__icon {
+    fill: #b5931c;
+}
+
+.footer__link:active .user-list__icon {
+    fill: #7e6d31;
 }
 
 .footer__adress {
@@ -902,6 +1026,42 @@ body {
     text-decoration: none;
 }
 
+.footer__social-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 141px;
+    margin-right: 483px;
+}
+
+.footer__social-icon {
+    fill: #7e7e7e;
+}
+
+.footer__social-icon:hover {
+    fill: #b5b5b5;
+}
+
+.footer__social-icon:active {
+    fill: #595959;
+}
+
+.footer__copyright {
+    display: block;
+    margin-top: -2px;
+}
+
+.footer__copyright-logo {
+    fill: #ffc600;
+}
+
+.footer__copyright:hover .footer__copyright-logo {
+    fill: #b5931c;
+}
+
+.footer__copyright:active .footer__copyright-logo {
+    fill: #7e6d31;
+}
 
 /* МОДАЛЬНЫЕ ОКНА  */
 
