@@ -419,6 +419,10 @@ body {
     color: #b6a661;
 }
 
+.main {
+    position: relative;
+}
+
 .main__slider-section {
     min-height: 592px;
 }
@@ -479,16 +483,18 @@ body {
     flex-wrap: wrap;
 }
 
-.slide-1 {
+.slide-first {
     /* display: none; */
     display: flex;
 }
 
-.slide-2 {
+.slide-second {
+    /* display: flex; */
     display: none;
 }
 
-.slide-3 {
+.slide-third {
+    /* display: flex; */
     display: none;
 }
 
@@ -512,6 +518,16 @@ body {
 
 .slide__image {
     margin-left: 10px;
+}
+
+.slide-second .slide__image {
+    margin-left: 36px;
+    margin-top: 12px;
+}
+
+.slide-third .slide__image {
+    margin-left: -30px;
+    margin-top: 65px;
 }
 
 .slide__content {
@@ -741,7 +757,7 @@ body {
 }
 
 .slider-services__slide--delivery {
-    display: block;
+    display: none;
     background-image: url("../img/delivery-slider.png");
     background-repeat: no-repeat;
     background-position: 673px 85px;
@@ -761,7 +777,7 @@ body {
 }
 
 .slider-services__slide--credit {
-    display: none;
+    display: block;
     background-image: url("../img/credit-slider.png");
     background-repeat: no-repeat;
     background-position: 650px 61px;
@@ -1065,11 +1081,48 @@ body {
 
 /* МОДАЛЬНЫЕ ОКНА  */
 
+.modal {
+    position: absolute;
+}
+
+.modal-contact {
+    width: 960px;
+    min-height: 553px;
+    padding-top: 93px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #ffffff;
+    z-index: 10;
+    top: 1057px;
+    left: 50%;
+    margin-left: -480px;
+    box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);
+}
+
 .contact-form__item {
     margin: 0;
+    width: 360px;
+    display: inline-block;
+}
+
+.contact-form__item--mail {
+    float: right;
+}
+
+.contact-form__item--textarea {
+    width: 100%;
+    display: block;
+    margin-top: 33px;
+}
+
+.contact-form__item--textarea .contact-form__input{
+    min-height: 156px;
+    resize: none;
 }
 
 .contact-form__label {
+    display: block;
     font-size: 18px;
     line-height: 24px;
     font-family: "Gilroy", "Arial", sans-serif;
@@ -1079,7 +1132,13 @@ body {
 
 .contact-form__input {
     background-color: #f2f2f2;
-    border: none;
+    width: 100%;
+    border: 3px solid transparent;
+    margin-top: 7px;
+    padding-top: 12px;
+    padding-bottom: 15px; 
+    padding-left: 17px;
+    letter-spacing: -0.6px;   
 }
 
 .contact-form__input:hover {
@@ -1089,6 +1148,33 @@ body {
 .contact-form__input:focus {
     border: 3px solid #f7e296;
     background-color: transparent;
+}
+
+.modal-contact__interactive-link {
+    margin-top: 44px;
+    width: 200px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 22px;
+    right: 23px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.modal-close:hover .modal-close__icon{
+    fill: #f0c52e;
+}
+
+.modal-close:active .modal-close__icon{
+    fill: #faedc0;
+}
+
+.modal-close__icon {
+    fill: #f7e296;
 }
 
 /* СТРАНИЦА КАТАЛОГА  */
@@ -1169,3 +1255,5 @@ body {
     text-decoration: none;
     color: #000000;  
 }
+
+
