@@ -33,9 +33,9 @@
 
                     <ul class="header__user-list user-list list">
 
-                        <li class="user-list__item user-list__item--login">
+                        <li class="user-list__item user-list__item--username">
 
-                            <a href="#" class="user-list__link">
+                            <a href="#" class="header-link user-list__link">
                                 <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12"
                                     viewBox="0 0 13 12">
                                     <path
@@ -56,7 +56,7 @@
 
                         <li class="user-list__item user-list__item--compare">
 
-                            <a href="#" class="user-list__link">
+                            <a href="#" class="header-link user-list__link">
                                 <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
                                     viewBox="0 0 10 10">
                                     <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z" /></svg>
@@ -67,7 +67,7 @@
 
                         <li class="user-list__item user-list__item--cart">
 
-                            <a href="#" class="user-list__link">
+                            <a href="#" class="header-link user-list__link">
                                 <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
                                     viewBox="0 0 12 12">
                                     <path
@@ -86,7 +86,53 @@
 
                 <div class="header__row header__row--bottom">
 
-                    <button class="header__catalog-button" type="button">Каталог товаров</button>
+                    <div class="header__catalog-button">
+                        Каталог товаров
+                        <div class="header__catalog-menu">
+
+                            <nav class="header__catalog-navigation">
+        
+                                <ul class="header__catalog-list header__catalog-list--first list">
+        
+                                    <li class="header__catalog-item">
+                                        <a href="#" class="header__catalog-link">Виртуальная реальность</a>
+                                    </li>
+        
+                                    <li class="header__catalog-item">
+                                        <a href="#" class="header__catalog-link">Моноподы для селфи</a>
+                                    </li>
+        
+                                    <li class="header__catalog-item">
+                                        <a href="#" class="header__catalog-link">Экшн-камеры</a>
+                                    </li>
+        
+                                </ul>
+        
+                                <ul class="header__catalog-list list">
+        
+                                    <li class="header__catalog-item">
+                                        <a href="#" class="header__catalog-link">Фитнес-браслеты</a>
+                                    </li>
+        
+                                    <li class="header__catalog-item">
+                                        <a href="#" class="header__catalog-link">Умные часы</a>
+                                    </li>
+        
+                                </ul>
+        
+                                <ul class="header__catalog-list list">
+        
+                                    <li class="header__catalog-item">
+                                        <a href="#" class="header__catalog-link">Квадрокоптеры</a>
+                                    </li>
+        
+                                </ul>
+        
+                            </nav>
+            
+                            </div>
+
+                        </div>
 
                     <nav class="header__navigation navigation">
 
@@ -102,52 +148,6 @@
 
                             <li class="navigation__item">
                                 <a href="#" class="navigation__link">Контакты</a>
-                            </li>
-
-                        </ul>
-
-                    </nav>
-
-                </div>
-
-                <!-- ВЫПАДАЮЩИЙ КАТАЛОГ ТОВАРОВ -->
-
-                <div class="header__catalog-menu">
-
-                    <nav class="header__catalog-navigation">
-
-                        <ul class="header__catalog-list header__catalog-list--first list">
-
-                            <li class="header__catalog-item">
-                                <a href="#" class="header__catalog-link">Виртуальная реальность</a>
-                            </li>
-
-                            <li class="header__catalog-item">
-                                <a href="#" class="header__catalog-link">Моноподы для селфи</a>
-                            </li>
-
-                            <li class="header__catalog-item">
-                                <a href="#" class="header__catalog-link">Экшн-камеры</a>
-                            </li>
-
-                        </ul>
-
-                        <ul class="header__catalog-list list">
-
-                            <li class="header__catalog-item">
-                                <a href="#" class="header__catalog-link">Фитнес-браслеты</a>
-                            </li>
-
-                            <li class="header__catalog-item">
-                                <a href="#" class="header__catalog-link">Умные часы</a>
-                            </li>
-
-                        </ul>
-
-                        <ul class="header__catalog-list list">
-
-                            <li class="header__catalog-item">
-                                <a href="#" class="header__catalog-link">Квадрокоптеры</a>
                             </li>
 
                         </ul>
@@ -181,7 +181,7 @@
                     </li>
 
                     <li class="breadcrumbs__item">
-                        Моноподы для селфи
+                        <a class="breadcrumbs__link">Моноподы для селфи</a>
                     </li>
 
                 </ul>
@@ -250,7 +250,7 @@
 
             <div class="container container--flex">
 
-                <form class="search-form" action="#" method="GET">
+                <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
 
                     <fieldset class="search-form__set search-form__set--range">
 
@@ -267,8 +267,9 @@
                                 <div class="range__toggle range__toggle--min"></div>
                                 <div class="range__toggle range__toggle--max"></div>
 
-                                <p class="range__value range__value--min">от 0</p>
-                                <p class="range__value range__value--max">до 5000</p>
+                                <input type="text" name="value-min" placeholder="от 0" class="range__value range__value--min">
+                                <input type="text" name="value-max" placeholder="до 5000" class="range__value range__value--max">
+
 
                             </div>
 
@@ -374,14 +375,10 @@
 
                             </div>
 
-
-                            <span class="catalog__new">New</span>
-
-
                             <div class="catalog__item-hover">
 
-                                <button type="button" class="interactive-link catalog__interactive-link">Вкорзину</button>
-                                <button type="button" class="catalog__add-to-compare">Добавить к сравнению</button>
+                                <a href="#" class="interactive-link catalog__interactive-link">Вкорзину</a>
+                                <a href="#" class="catalog__add-to-compare">Добавить к сравнению</a>
 
                             </div>
 
@@ -402,13 +399,10 @@
 
                             </div>
 
-
-                            <span class="catalog__new">New</span>
-
                             <div class="catalog__item-hover">
 
-                                <button type="button" class="interactive-link catalog__interactive-link">В корзину</button>
-                                <button type="button" class="catalog__add-to-compare">Добавить к сравнению</button>
+                                <a href="#" class="interactive-link catalog__interactive-link">В корзину</a>
+                                <a href="#" class="catalog__add-to-compare">Добавить к сравнению</a>
 
                             </div>
 
@@ -429,14 +423,10 @@
 
                             </div>
 
-
-
-                            <span class="catalog__new">New</span>
-
                             <div class="catalog__item-hover">
 
-                                <button type="button" class="interactive-link catalog__interactive-link">В корзину</button>
-                                <button type="button" class="catalog__add-to-compare">Добавить к сравнению</button>
+                                <a href="#" class="interactive-link catalog__interactive-link">В корзину</a>
+                                <a href="#" class="catalog__add-to-compare">Добавить к сравнению</a>
 
                             </div>
 
@@ -457,12 +447,10 @@
 
                             </div>
 
-                            <span class="catalog__new">New</span>
-
                             <div class="catalog__item-hover">
 
-                                <button type="button" class="interactive-link catalog__interactive-link">В корзину</button>
-                                <button type="button" class="catalog__add-to-compare">Добавить к сравнению</button>
+                                <a href="#" class="interactive-link catalog__interactive-link">В корзину</a>
+                                <a href="#" class="catalog__add-to-compare">Добавить к сравнению</a>
 
                             </div>
 
@@ -514,7 +502,7 @@
 
                 <ul class="footer__user-list user-list list">
 
-                    <li class="user-list__item user-list__item--login">
+                    <li class="user-list__item user-list__item--username">
 
                         <a href="#" class="footer__link user-list__link">
                             <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12"
@@ -522,7 +510,7 @@
                                 <path
                                     d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" />
                             </svg>
-                            Валентин Петухов
+                            <span class="user-list__link-content">Валентин Петухов</span>
                         </a>
 
                     </li>
@@ -540,8 +528,8 @@
                         <a href="#" class="footer__link user-list__link">
                             <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
                                 viewBox="0 0 10 10">
-                                <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z" /></svg>
-                            Сравнить
+                                <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+                                <span class="user-list__link-content">Сравнить</span>
                         </a>
 
                     </li>
@@ -556,7 +544,7 @@
                                 <path
                                     d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z" />
                             </svg>
-                            Корзина
+                            <span class="user-list__link-content">Корзина</span>
                         </a>
 
                     </li>

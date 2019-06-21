@@ -77,7 +77,54 @@
 
         <div class="header__row header__row--bottom">
 
-          <button class="header__catalog-button" type="button">Каталог товаров</button>
+          <div class="header__catalog-button">           
+            Каталог товаров
+
+            <div class="header__catalog-menu">
+
+                <nav class="header__catalog-navigation">
+      
+                  <ul class="header__catalog-list header__catalog-list--first list">
+      
+                    <li class="header__catalog-item">
+                      <a href="#" class="header__catalog-link">Виртуальная реальность</a>
+                    </li>
+      
+                    <li class="header__catalog-item">
+                      <a href="#" class="header__catalog-link">Моноподы для селфи</a>
+                    </li>
+      
+                    <li class="header__catalog-item">
+                      <a href="#" class="header__catalog-link">Экшн-камеры</a>
+                    </li>
+      
+                  </ul>
+      
+                  <ul class="header__catalog-list list">
+      
+                    <li class="header__catalog-item">
+                      <a href="#" class="header__catalog-link">Фитнес-браслеты</a>
+                    </li>
+      
+                    <li class="header__catalog-item">
+                      <a href="#" class="header__catalog-link">Умные часы</a>
+                    </li>
+      
+                  </ul>
+      
+                  <ul class="header__catalog-list list">
+      
+                    <li class="header__catalog-item">
+                      <a href="#" class="header__catalog-link">Квадрокоптеры</a>
+                    </li>
+      
+                  </ul>
+      
+                </nav>
+      
+              </div>
+
+              </div>
 
           <nav class="header__navigation navigation">
 
@@ -102,49 +149,7 @@
         </div>
 
         <!-- ВЫПАДАЮЩИЙ КАТАЛОГ ТОВАРОВ -->
-        <div class="header__catalog-menu">
 
-          <nav class="header__catalog-navigation">
-
-            <ul class="header__catalog-list header__catalog-list--first list">
-
-              <li class="header__catalog-item">
-                <a href="#" class="header__catalog-link">Виртуальная реальность</a>
-              </li>
-
-              <li class="header__catalog-item">
-                <a href="#" class="header__catalog-link">Моноподы для селфи</a>
-              </li>
-
-              <li class="header__catalog-item">
-                <a href="#" class="header__catalog-link">Экшн-камеры</a>
-              </li>
-
-            </ul>
-
-            <ul class="header__catalog-list list">
-
-              <li class="header__catalog-item">
-                <a href="#" class="header__catalog-link">Фитнес-браслеты</a>
-              </li>
-
-              <li class="header__catalog-item">
-                <a href="#" class="header__catalog-link">Умные часы</a>
-              </li>
-
-            </ul>
-
-            <ul class="header__catalog-list list">
-
-              <li class="header__catalog-item">
-                <a href="#" class="header__catalog-link">Квадрокоптеры</a>
-              </li>
-
-            </ul>
-
-          </nav>
-
-        </div>
 
       </div>
 
@@ -568,7 +573,7 @@
 
         <ul class="footer__user-list user-list list">
 
-          <li class="user-list__item">
+          <li class="user-list__item user-list__item--login">
             <a href="#" class="footer__link user-list__link">
               <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12"
                 viewBox="0 0 13 12">
@@ -588,7 +593,7 @@
             </a>
           </li>
 
-          <li class="user-list__item">
+          <li class="user-list__item user-list__item--cart">
             <a href="#" class="footer__link user-list__link">
               <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
                 viewBox="0 0 12 12">
@@ -701,17 +706,17 @@
 
       <p class="contact-form__item">
         <label class="contact-form__label" for="name-field">Ваше имя:</label>
-        <input class="contact-form__input" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+        <input class="contact-form__input contact-form__input--name" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
       </p>
 
       <p class="contact-form__item contact-form__item--mail">
         <label class="contact-form__label" for="mail-field">Ваш e-mail:</label>
-        <input class="contact-form__input" type="email" name="mail" id="mail-field" placeholder="email@example.com">
+        <input class="contact-form__input contact-form__input--mail" type="email" name="mail" id="mail-field" placeholder="email@example.com">
       </p>
 
       <p class="contact-form__item contact-form__item--textarea">
         <label class="contact-form__label" for="text-field">Текст письма:</label>
-        <textarea class="contact-form__input" name="text" id="text-field" placeholder="В свободной форме"></textarea>
+        <textarea class="contact-form__input contact-form__input--text" name="text" id="text-field" placeholder="В свободной форме"></textarea>
       </p>
 
       <button type="submit" class="interactive-link modal-contact__interactive-link">Отправить</button>
@@ -738,15 +743,19 @@
         width="960" height="560" style="border:0" allowfullscreen></iframe>
     </p>
 
-    <button class="modal-close" type="button">
+    <button class="modal-close modal-close--map" type="button">
+
       <svg class="modal-close__icon" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
         <path
           d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z" />
       </svg>
       <span class="visually-hidden">Закрыть</span>
+
     </button>
 
   </section>
+
+  <script src="js/index.min.js"></script>
 
 </body>
 
