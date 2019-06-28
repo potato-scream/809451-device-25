@@ -168,15 +168,7 @@
 
         <div class="slider">
 
-          <ul class="slider__toggles list">
-
-            <li class="slider__toggle slider__toggle--active"></li>
-            <li class="slider__toggle"></li>
-            <li class="slider__toggle"></li>
-
-          </ul>
-
-          <div class="slide slide-first">
+          <div class="slide slide-first slide--active">
 
             <div class="slide__image-box">
               <img src="img/big-slider-1.png" class="slide__image" width="384" height="486" alt="Изображение товара">
@@ -280,6 +272,14 @@
             </div>
 
           </div>
+
+          <ul class="slider__toggles list">
+
+            <li class="slider__toggle slider__toggle--first slider__toggle--active" data-id="first"></li>
+            <li class="slider__toggle slider__toggle--second" data-id="second"></li>
+            <li class="slider__toggle slider__toggle--third" data-id="third"></li>
+  
+          </ul>
 
         </div>
 
@@ -434,13 +434,13 @@
 
           <ul class="slider-services__toggles list">
 
-            <li class="slider-services__toggle slider-services__toggle--active">Доставка</li>
-            <li class="slider-services__toggle">Гарантия</li>
-            <li class="slider-services__toggle">Кредит</li>
+            <li class="slider-services__toggle slider-services__toggle--first slider-services__toggle--active">Доставка</li>
+            <li class="slider-services__toggle slider-services__toggle--second">Гарантия</li>
+            <li class="slider-services__toggle slider-services__toggle--third">Кредит</li>
             
           </ul>
 
-          <div class="slider-services__slide slider-services__slide--delivery">
+          <div class="slider-services__slide slider-services__slide--delivery slider-services__slide--active">
 
             <h2 class="section-title">Доставка</h2>
 
@@ -551,9 +551,12 @@
           проверить
           работоспособность покупки. Всякое бывает.</p>
 
-        <img class="contacts__map" src="img/map.jpg" alt="Карта нахождения нашего офиса" width="560" height="222">
+        <a href="map.html" class="contacts__map">
+          <span class="visually-hidden">Открыть карту</span> 
+          <img class="contacts__map-img" src="img/map.jpg" alt="Карта нахождения нашего офиса" width="560" height="222">
+        </a>
 
-        <a href="#" class="interactive-link contacts__interactive-link">Напишите нам</a>
+        <a href="writeus.html" class="interactive-link contacts__interactive-link">Напишите нам</a>
 
       </section>
 

@@ -493,6 +493,7 @@ body {
     background: -o-linear-gradient(top, #f7e296 113px, #fff 113px, #fff 200px);
     background: linear-gradient(to bottom, #f7e296 113px, #fff 113px, #fff 200px);
     counter-reset: slide;
+    min-height: 497px;
 } 
 
 .slider::before {
@@ -549,28 +550,16 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
+    position: absolute;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding-right: 60px;
     padding-left: 60px;
+    opacity: 0;
 }
 
-.slide-first {
-    /* display: none; */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.slide-second {
-    /* display: flex; */
-    display: none;
-}
-
-.slide-third {
-    /* display: flex; */
-    display: none;
+.slide--active {
+    opacity: 1;
 }
 
 .slide::before {
@@ -865,10 +854,14 @@ body {
     width: 876px;
     padding-top: 73px;
     padding-left: 117px;
+    display: none;
+}
+
+.slider-services__slide--active {
+    display: block;
 }
 
 .slider-services__slide--delivery {
-    display: block;
     background-image: url("../img/delivery-slider.png");
     background-position: 673px 85px;
     background-repeat: no-repeat;
@@ -881,14 +874,12 @@ body {
 }
 
 .slider-services__slide--warranty {
-    display: none;
     background-image: url("../img/warranty-slider.png");
     background-position: 659px 61px;
     background-repeat: no-repeat;
 }
 
 .slider-services__slide--credit {
-    display: none;
     background-image: url("../img/credit-slider.png");
     background-position: 650px 61px;
     background-repeat: no-repeat;
@@ -1045,6 +1036,7 @@ body {
 
 .contacts__map {
     margin-top: 39px;
+    display: block;
 }
 
 .contacts__interactive-link {
@@ -1348,6 +1340,7 @@ body {
 
 .contact-form__item {
     display: inline-block;
+    vertical-align: middle;
     width: 360px;
     margin: 0;
 }
@@ -1394,6 +1387,12 @@ body {
 .contact-form__input:focus {
     border: 3px solid #f7e296;
     background-color: transparent;
+}
+
+.contact-form__input:invalid {
+    background-color: #fda3a37c;
+    color: #000;
+    opacity: 0.5;
 }
 
 .modal-contact__interactive-link {
@@ -1903,7 +1902,7 @@ body {
 }
 
 .pagination__link {
-    padding-top: 23px;
+    padding-top: 26px;
     padding-right: 28px;
     padding-bottom: 22px;
     padding-left: 30px;  
@@ -2076,6 +2075,7 @@ body {
 
 .catalog__title {
     display: inline-block;
+    vertical-align: baseline;
     margin: 0;
     font-family: "Gilroy", "Arial", sans-serif; 
     font-size: 18px;
@@ -2093,4 +2093,4 @@ body {
     letter-spacing: 0.3px;
     line-height: 24px;
     white-space: nowrap; 
-} 
+}
